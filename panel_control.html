@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Panel de Control Predictivo</title>
+  <link rel="stylesheet" href="style_pc.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="browser">
+        <div class="app-header">
+            <span>Open Lab by Open Intelligence</span>
+            <span> </span>
+            <span> Panel Control</span>
+            <span> </span>
+            <span>Juliana 👤✅</span>
+            <span style="color: black;">⚙️</span>
+        </div>
+<div class="control-panel">
+  <h2>Panel de Control Predictivo</h2>
+  <p>Monitoreo en tiempo real del estado de la actualización y rendimiento del sistema.</p>
+
+  <!-- Vista de Resumen de Impacto -->
+  <div class="impact-summary">
+    <h3>Resumen de Impacto</h3>
+    <ul>
+      <li>Módulo de Pagos: <span class="risk-tag high">Alto Riesgo</span></li>
+      <li>Perfiles de Cliente: <span class="risk-tag medium">Riesgo Medio</span></li>
+      <li>Historial de Transacciones: <span class="risk-tag low">Riesgo Bajo</span></li>
+    </ul>
+  </div>
+
+  <!-- Indicadores Clave -->
+  <div class="kpi-section">
+    <h3>Indicadores Clave</h3>
+    <div class="kpi">
+      <span>Actualización Completa:</span>
+      <strong>95%</strong>
+    </div>
+    <div class="kpi">
+      <span>Estado del Fondo de Protección:</span>
+      <strong>75% Usado</strong>
+    </div>
+    <div class="kpi">
+      <span>Clientes Cubiertos:</span>
+      <strong>120</strong>
+    </div>
+  </div>
+
+  <!-- Alertas y Notificaciones -->
+  <div class="alerts-section">
+    <h3>Alertas y Notificaciones</h3>
+    <ul>
+      <li class="alert error">Error crítico en módulo de pagos - Revisión requerida</li>
+      <li class="alert warning">Rendimiento bajo en Perfiles de Cliente - Atención recomendada</li>
+      <li class="alert info">Actualización de Historial de Transacciones completada exitosamente</li>
+    </ul>
+</div>
+</div>
+
+  <!-- Historial de Cambios Recientes -->
+  <div class="history-section">
+    <h3>Historial de Cambios Recientes</h3>
+    <ul>
+      <li>Despliegue completado en módulo de pagos - 10:35 AM</li>
+      <li>Prueba de fondo interno exitosa - 10:30 AM</li>
+      <li>Alerta resuelta en Perfiles de Cliente - 10:15 AM</li>
+    </ul>
+  </div>
+
+  <!-- Controles para el Usuario -->
+  <div class="control-buttons">
+    <button onclick="aprobarActualizacion()">Aprobar Actualización</button>
+    <button onclick="revertirActualizacion()">Revertir Actualización</button>
+  </div>
+</div>
+
+<script>
+// Funciones simuladas para aprobar o revertir la actualización
+function aprobarActualizacion() {
+  alert("La actualización ha sido aprobada.");
+}
+
+function revertirActualizacion() {
+  alert("La actualización ha sido revertida.");
+}
+</script>
+
+</body>
+</html>

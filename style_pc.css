@@ -1,0 +1,132 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f0f2f5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 110vh;
+}
+
+.control-panel {
+  background-color: #e9ecef;
+  color: #343a40;
+  border-radius: 10px;
+  padding: 20px;
+  max-width: 800px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.control-panel h2, .control-panel h3 {
+  color: #0056b3;
+  margin-bottom: 10px;
+}
+
+.control-panel p, .control-panel ul {
+  color: #333333;
+  line-height: 1.6;
+}
+
+.impact-summary ul, .alerts-section ul, .history-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.risk-tag {
+  padding: 3px 8px;
+  border-radius: 5px;
+  margin-left: 10px;
+  font-size: 0.8em;
+  color: white;
+}
+
+.high {
+  background-color: #dc3545;
+}
+
+.medium {
+  background-color: #ffc107;
+}
+
+.low {
+  background-color: #28a745;
+}
+
+.kpi-section {
+  margin-top: 20px;
+}
+
+.kpi {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px;
+  background-color: #f8f9fa;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+.alerts-section ul, .history-section ul {
+  margin-top: 10px;
+}
+
+.alert {
+  padding: 8px;
+  border-radius: 5px;
+  margin-bottom: 8px;
+}
+
+.error {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+.warning {
+  background-color: #fff3cd;
+  color: #856404;
+}
+
+.info {
+  background-color: #d1ecf1;
+  color: #0c5460;
+}
+
+.control-buttons {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.control-buttons button {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 5px;
+  font-size: 1em;
+}
+
+.control-buttons button:hover {
+  background-color: #0056b3;
+}
+.app-header {
+    background-color: #007bff;
+    color: #ffffff;
+    padding: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+}
+.browser {
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+  }
