@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Motor de Pruebas Automatizadas</title>
+  <link rel="stylesheet" href="style_mp.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="browser">
+        <div class="app-header">
+            <span>Open Lab by Open Intelligence</span>
+            <span> </span>
+            <span> Motor Pruebas</span>
+            <span> </span>
+            <span>Juliana 👤✅</span>
+            <span style="color: black;">⚙️</span>
+        </div>
+    <div class="test-engine">
+  <h2>Motor de Generación y Ejecución de Pruebas Automatizadas</h2>
+  <p>Estos casos de prueba han sido generados automáticamente para validar la actualización en el sistema.</p>
+
+  <!-- Sección de Configuración de Pruebas -->
+  <div class="test-config">
+    <h3>Configuración de Pruebas</h3>
+    <label for="environment">Entorno de Prueba:</label>
+    <select id="environment">
+      <option value="pre-production">Preproducción</option>
+      <option value="sandbox">Sandbox</option>
+    </select>
+
+    <label for="test-type">Tipo de Pruebas:</label>
+    <select id="test-type">
+      <option value="functional">Funcionales</option>
+      <option value="performance">De Rendimiento</option>
+      <option value="security">De Seguridad</option>
+    </select>
+    <button onclick="iniciarPruebas()">Iniciar Pruebas</button>
+  </div>
+
+  <!-- Lista de Casos de Prueba Generados -->
+  <div class="test-cases">
+    <h3>Casos de Prueba Generados</h3>
+    <ul id="test-case-list">
+      <li>Prueba de integridad de fondo interno</li>
+      <li>Verificación de activación tras 6 cuotas impagas</li>
+      <li>Validación de generación de reportes</li>
+      <li>Simulación de cobertura de deuda</li>
+    </ul>
+  </div>
+
+  <!-- Resultados en Tiempo Real -->
+  <div id="real-time-results" class="test-results" style="display: none;">
+    <h3>Resultados de Pruebas en Tiempo Real</h3>
+    <ul id="results-list">
+      <!-- Resultados en tiempo real aparecerán aquí -->
+    </ul>
+  </div>
+
+  <!-- Resumen Final de Resultados -->
+  <div id="final-summary" class="test-summary" style="display: none;">
+    <h3>Resumen de Resultados de Pruebas</h3>
+    <p id="summary-text">Pruebas completadas con éxito. <span id="passed-count">0</span> éxitos, <span id="failed-count">0</span> errores.</p>
+  </div>
+</div>
+    </div>
+
+<script>
+// Función para iniciar las pruebas y mostrar resultados en tiempo real
+function iniciarPruebas() {
+  document.getElementById('real-time-results').style.display = 'block';
+  const resultsList = document.getElementById('results-list');
+  resultsList.innerHTML = ''; // Limpiar resultados previos
+
+  const testCases = [
+    "Prueba de integridad de fondo interno",
+    "Verificación de activación tras 6 cuotas impagas",
+    "Validación de generación de reportes",
+    "Simulación de cobertura de deuda"
+  ];
+
+  let passed = 0, failed = 0;
+
+  testCases.forEach((test, index) => {
+    setTimeout(() => {
+      const resultItem = document.createElement('li');
+      const passedTest = Math.random() > 0.3; // Simulación: 70% de éxito, 30% de error
+
+      resultItem.textContent = `${test}: ${passedTest ? 'Éxito' : 'Error'}`;
+      resultItem.classList.add(passedTest ? 'success' : 'failure');
+      
+      resultsList.appendChild(resultItem);
+
+      if (passedTest) {
+        passed++;
+      } else {
+        failed++;
+      }
+
+      // Si es la última prueba, mostrar el resumen final
+      if (index === testCases.length - 1) {
+        mostrarResumenFinal(passed, failed);
+      }
+    }, 1000 * (index + 1)); // Simular ejecución de cada prueba en intervalos de 1 segundo
+  });
+}
+
+// Función para mostrar el resumen final de resultados
+function mostrarResumenFinal(passed, failed) {
+  document.getElementById('final-summary').style.display = 'block';
+  document.getElementById('passed-count').textContent = passed;
+  document.getElementById('failed-count').textContent = failed;
+}
+</script>
+
+</body>
+</html>

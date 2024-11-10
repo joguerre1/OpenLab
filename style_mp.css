@@ -1,0 +1,103 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f0f2f5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 105vh;
+}
+
+.test-engine {
+  background-color: #fff3cd; /* Color de fondo para el módulo */
+  color: #856404;
+  border-radius: 10px;
+  padding: 20px;
+  max-width: 700px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.test-engine h2, .test-engine h3 {
+  color: #0056b3;
+  margin-bottom: 10px;
+}
+
+.test-engine p, .test-engine ul {
+  color: #333333;
+  line-height: 1.6;
+}
+
+.test-config label {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.test-config select, .test-config button {
+  display: block;
+  margin-top: 5px;
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 1em;
+}
+
+.test-config button {
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  margin-top: 15px;
+}
+
+.test-config button:hover {
+  background-color: #0056b3;
+}
+
+.test-cases ul {
+  list-style: disc;
+  padding-left: 20px;
+}
+
+.test-results ul, .test-summary ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 15px;
+}
+
+.success {
+  color: #28a745;
+}
+
+.failure {
+  color: #dc3545;
+}
+
+.test-summary {
+  background-color: #d4edda;
+  color: #155724;
+  padding: 15px;
+  border-radius: 8px;
+  margin-top: 20px;
+  text-align: center;
+}
+.app-header {
+    background-color: #007bff;
+    color: #ffffff;
+    padding: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+}
+.browser {
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+  }
