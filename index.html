@@ -1,33 +1,66 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Open Lab</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style_fe.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 </head>
 <body>
- 
-  <div id="chatContainer">
-        <div class="chat-header">
+  <div class="browser">
+    <div class="app-header">
         <span>Open Lab by Open Intelligence</span>
         <span> </span>
-        <span> Innovation Module</span>
+        <span></span>
         <span> </span>
         <span> </span>
         <span>Juliana 👤✅</span>
         <span style="color: black;">⚙️</span>
     </div>
-
-    <div id="chat"></div>
-    <div id="inputArea">
-      <input type="text" id="userInput" placeholder="Escribe tu respuesta..." autocomplete="off" autofocus />
-      <button id="sendBtn"> ➤</button>
+    <div class="browser-bar">
+      <span class="dot red"></span>
+      <span class="dot yellow"></span>
+      <span class="dot green"></span>
+      <span class="url" >∞ Automated Continuous Improvement Platform for Utility Updates ∞</span>
     </div>
+    <div class="dashboard">
+      <div class="section" id="data-source">
+        <img src="icon/insumos.jpg" alt="Origen de Datos">
+        <h2>Origen de Datos</h2>
+        <p>Configuración y carga de datos</p>
+      </div>
+      <div class="section" id="predictive-analysis">
+        <img src="icon/analisis.jpg" alt="Análisis Predictivo">
+        <h2>Análisis Predictivo</h2>
+        <p>Interpretación y predicciones</p>
+      </div>
+      <div class="section" id="automated-testing">
+        <img src="icon/pruebas.jpg" alt="Motor de Pruebas">
+        <h2>Motor de Pruebas</h2>
+        <p>Ejecución de pruebas automáticas</p>
+      </div>
+      <div class="section" id="lifecycle-orchestration">
+        <img src="icon/orquestacion.jpg" alt="Orquestación del Ciclo de Vida">
+        <h2>Orquestación del Ciclo de Vida</h2>
+        <p>Despliegue en ambientes de prueba y producción</p>
+      </div>
+      <div class="section" id="user-interaction">
+        <img src="icon/user.jpg" alt="Interacción del Usuario">
+        <h2>Interacción del Usuario</h2>
+        <p>Visualización de incidencias y monitoreo</p>
+      </div>
+      <div class="section" id="innovation-module">
+        <a href="innovation.html">
+            <img src="icon/innovacion.jpg" alt="Módulo de Innovación">
+        </a>
+        <h2>Módulo de Innovación</h2>
+        <p>Proyectos y mejoras innovadoras</p>
+      </div>
+
+</div>
   </div>
-  
-  <script type="module" src="script.js"></script>
 </body>
 </html>
