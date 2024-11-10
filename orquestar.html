@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Módulo de Orquestación de Ciclo de Vida</title>
+  <link rel="stylesheet" href="style_orq.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="browser">
+        <div class="app-header">
+            <span>Open Lab by Open Intelligence</span>
+            <span> </span>
+            <span> Aprendizaje</span>
+            <span> </span>
+            <span>Juliana 👤✅</span>
+            <span style="color: black;">⚙️</span>
+        </div>
+
+<div class="orchestration-module">
+  <h2>Orquestación Automática del Ciclo de Vida de la Actualización</h2>
+  <p>Coordina y supervisa cada etapa de la actualización, asegurando que todas las fases se completen correctamente.</p>
+
+  <!-- Lista de Fases de Actualización -->
+  <div class="phase-list">
+    <h3>Fases de Actualización</h3>
+    <ul>
+        <li><strong>Carga de Datos:</strong> <span class="status completed" id="status-carga-de-datos">Completada</span> <button onclick="iniciarFase('Carga de Datos')" disabled>Iniciar</button></li>
+        <li><strong>Análisis de Impacto:</strong> <span class="status completed" id="status-analisis-de-impacto">Completada</span> <button onclick="iniciarFase('Análisis de Impacto')" disabled>Iniciar</button></li>
+        <li><strong>Pruebas Automatizadas:</strong> <span class="status in-progress" id="status-pruebas-automatizadas">En Progreso</span> <button id="btn-pruebas-automatizadas" onclick="iniciarFase('Pruebas Automatizadas')">Iniciar</button></li>
+        <li><strong>Despliegue en ambientes no productivos:</strong> <span class="status pending" id="status-no-productivos">Pendiente</span> <button id="btn-no-productivos" onclick="iniciarFase('No productivos')">Iniciar</button></li>
+        <li><strong>Despliegue en Producción:</strong> <span class="status pending" id="status-deployment">Pendiente</span> <button id="btn-deployment" onclick="aprobarDespliegue()">Aprobar y Desplegar</button></li>
+    </ul>
+  </div>
+
+  <!-- Registro de Eventos -->
+  <div class="event-log">
+    <h3>Registro de Eventos</h3>
+    <ul id="event-log">
+      <!-- Eventos serán registrados aquí -->
+    </ul>
+  </div>
+</div>
+</div>
+
+<script>
+// Función para iniciar una fase y actualizar el estado en pantalla
+function iniciarFase(fase) {
+  const statusId = `status-${fase.toLowerCase().replace(' ', '-')}`;
+  const btnId = `btn-${fase.toLowerCase().replace(' ', '-')}`;
+  
+  document.getElementById(statusId).textContent = 'En Progreso';
+  document.getElementById(statusId).classList.remove('pending');
+  document.getElementById(statusId).classList.add('in-progress');
+
+  // Registrar evento en el log
+  registrarEvento(`Fase '${fase}' iniciada`);
+  
+  // Simular finalización de la fase tras un breve tiempo
+  setTimeout(() => completarFase(fase, statusId), 2000);
+  document.getElementById(btnId).disabled=true;
+}
+
+// Función para completar una fase y actualizar el estado en pantalla
+function completarFase(fase, statusId) {
+  document.getElementById(statusId).textContent = 'Completada';
+  document.getElementById(statusId).classList.remove('in-progress');
+  document.getElementById(statusId).classList.add('completed');
+  
+  // Registrar evento en el log
+  registrarEvento(`Fase '${fase}' completada`);
+}
+
+// Función para aprobar el despliegue en producción
+function aprobarDespliegue() {
+  const statusId = 'status-deploy';
+  if (confirm("¿Estás seguro de que deseas aprobar el despliegue en producción?")) {
+    iniciarFase('deployment');
+  }
+}
+
+// Función para registrar eventos en el log
+function registrarEvento(mensaje) {
+  const logItem = document.createElement('li');
+  logItem.textContent = mensaje;
+  document.getElementById('event-log').appendChild(logItem);
+}
+</script>
+
+</body>
+</html>
