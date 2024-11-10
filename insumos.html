@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Detalles del Release</title>
+  <link rel="stylesheet" href="style_insumos.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="browser">
+    <div class="app-header">
+        <span>Open Lab by Open Intelligence</span>
+        <span> </span>
+        <span></span>
+        <span>Origen de datos </span>
+        <span> </span>
+        <span>Juliana 👤✅</span>
+        <span style="color: black;">⚙️</span>
+    </div>
+ <div class="release-details">
+  <h2>Detalles del Release</h2>
+  <p>Implementación del Fondo Interno en el sistema CIS para protección de deuda en caso de incumplimiento.</p>
+  
+  <h3>Documentación Técnica</h3>
+  <button onclick="descargarDocumentacion()">Descargar Notas de Release</button>
+
+  <h3>Resumen de Cambios</h3>
+  <ul>
+    <li>Integración del fondo interno en CIS para cobertura en caso de incumplimiento.</li>
+    <li>Activación automática después de 6 cuotas impagas.</li>
+    <li>Generación de reportes periódicos sobre el estado del fondo.</li>
+  </ul>
+
+  <h3>Cargar Documentos</h3>
+  <input type="file" id="file-upload" multiple>
+  <button onclick="subirArchivos()">Subir Documentos</button>
+
+  <div class="file-status">
+    <h4>Archivos Cargados</h4>
+    <ul id="file-list">
+      <!-- Lista de archivos cargados dinámicamente -->
+    </ul>
+  </div>
+
+  <button onclick="confirmarAlmacenamiento()">Confirmar Almacenamiento en Data Lake</button>
+  <!-- Mensaje de Confirmación y Botón para Continuar al Análisis -->
+  <div id="confirmation-message" class="confirmation-message" style="display: none;">
+    <h4>¡Éxito!</h4>
+    <p>Todos los archivos se han almacenado en el Data Lake. Puedes continuar al análisis de impacto.</p>
+    <button onclick="mostrarAnalisisImpacto()">Continuar al Análisis de Impacto</button>
+  </div>
+
+    <!-- Panel de Análisis de Impacto, inicialmente oculto -->
+    <div id="impact-summary" class="impact-summary" style="display: none;">
+        <h3>Resumen de Impacto Potencial</h3>
+        <p>Este análisis identifica las áreas del sistema CIS que podrían verse afectadas por la actualización.</p>
+    
+        <div class="impact-areas">
+          <h4>Áreas Afectadas</h4>
+          <ul>
+            <li>Módulo de Pagos <span class="risk-tag high">Alto Riesgo</span></li>
+            <li>Perfiles de Cliente <span class="risk-tag medium">Riesgo Medio</span></li>
+            <li>Historial de Transacciones <span class="risk-tag low">Riesgo Bajo</span></li>
+          </ul>
+        </div>
+    
+        <button onclick="iniciarPruebas()">Iniciar Pruebas Automatizadas</button>
+      </div>
+    
+</div>
+</div>
+
+<script>
+// Función para simular la descarga de la documentación
+function descargarDocumentacion() {
+  alert("Descargando Notas de Release...");
+}
+
+// Función para cargar archivos y mostrarlos en la lista
+function subirArchivos() {
+  const fileInput = document.getElementById('file-upload');
+  const fileList = document.getElementById('file-list');
+  
+  // Limpia la lista antes de agregar nuevos archivos
+  fileList.innerHTML = '';
+
+  // Recorre los archivos seleccionados
+  Array.from(fileInput.files).forEach(file => {
+    const listItem = document.createElement('li');
+    listItem.textContent = `${file.name} - Tamaño: ${file.size} bytes`;
+    listItem.dataset.status = "almacenado";
+    listItem.classList.add('file-item');
+    fileList.appendChild(listItem);
+  });
+
+  // Mensaje de confirmación
+  alert("Archivos cargados exitosamente.");
+}
+
+// Función para confirmar almacenamiento en el Data Lake
+function confirmarAlmacenamiento() {
+  const fileListItems = document.querySelectorAll('#file-list .file-item');
+
+  if (fileListItems.length === 0) {
+    alert("No hay archivos para confirmar. Por favor, carga algún archivo.");
+    return;
+  }
+
+  fileListItems.forEach(item => {
+    item.textContent += " - Almacenado en Data Lake";
+  });
+
+  alert("Todos los archivos han sido almacenados en el Data Lake.");
+
+    // Muestra el mensaje de confirmación y el botón para continuar
+    document.getElementById('confirmation-message').style.display = 'block';
+}
+
+// Función para mostrar el análisis de impacto después de la confirmación
+function mostrarAnalisisImpacto() {
+  document.getElementById('confirmation-message').style.display = 'none';
+  document.getElementById('impact-summary').style.display = 'block';
+}
+
+// Función para iniciar las pruebas automatizadas (simulada)
+function iniciarPruebas() {
+  alert("Iniciando Pruebas Automatizadas...");
+}
+
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,163 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f0f2f5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
+  
+  .release-details {
+    background-color: #cce5ff; /* Color del módulo Origen de Datos */
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: auto;
+  }
+  
+  .release-details h2 {
+    color: #0056b3; /* Tono de azul más oscuro para títulos */
+    font-size: 1.5em;
+    margin-bottom: 10px;
+  }
+  
+  .release-details h3 {
+    color: #333333;
+    font-size: 1.2em;
+    margin-top: 15px;
+  }
+  
+  .release-details p, .release-details ul {
+    font-size: 1em;
+    color: #333333;
+    line-height: 1.6;
+  }
+  
+  .release-details ul {
+    padding-left: 20px;
+    list-style: disc;
+  }
+  
+  .release-details button {
+    background-color: #007bff; /* Botón azul */
+    color: #ffffff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    font-size: 1em;
+  }
+  
+  .release-details button:hover {
+    background-color: #0056b3; /* Color azul más oscuro al pasar el mouse */
+  }
+  
+  .release-details input[type="file"] {
+    display: block;
+    margin-top: 10px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+  }
+  
+  .file-status {
+    margin-top: 20px;
+  }
+  
+  .file-status h4 {
+    color: #0056b3;
+    font-size: 1.2em;
+  }
+  
+  .file-status ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+  }
+  
+  .file-status li {
+    background-color: #e2e3e5;
+    padding: 8px;
+    margin-bottom: 8px;
+    border-radius: 5px;
+    font-size: 0.95em;
+    color: #333333;
+  }
+
+  .confirmation-message {
+    background-color: #d4edda;
+    color: #155724;
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 20px;
+    text-align: center;
+  }
+  
+  .confirmation-message h4 {
+    margin-bottom: 10px;
+  }
+  
+  .impact-summary {
+    background-color: #fff3cd;
+    color: #856404;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 20px;
+  }
+  
+  .impact-areas ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .impact-areas li {
+    padding: 8px 0;
+    font-size: 1em;
+  }
+  
+  .risk-tag {
+    padding: 3px 8px;
+    border-radius: 5px;
+    margin-left: 10px;
+    font-size: 0.8em;
+    color: white;
+  }
+  
+  .high {
+    background-color: #dc3545;
+  }
+  
+  .medium {
+    background-color: #ffc107;
+  }
+  
+  .low {
+    background-color: #28a745;
+  }
+
+  .app-header {
+    background-color: #007bff;
+    color: #ffffff;
+    padding: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+}
+.browser {
+     border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+  }
+  
