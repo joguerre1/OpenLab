@@ -1,0 +1,97 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f0f2f5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.browser {
+  width: 800px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+}
+
+.browser-bar {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  background-color: #e0e0e0;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  margin-right: 8px;
+}
+
+.red { background-color: #ff5f57; }
+.yellow { background-color: #ffbd2e; }
+.green { background-color: #27c93f; }
+
+.url {
+  margin-left: auto;
+  color: #555555;
+  font-size: 0.9em;
+}
+
+.dashboard {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+  padding: 14px;
+}
+
+.section {
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.section h2 {
+  font-size: 1.2em;
+  margin-bottom: 8px;
+}
+
+.section p {
+  font-size: 0.9em;
+  color: #666666;
+}
+
+.app-header {
+    background-color: #007bff;
+    color: #ffffff;
+    padding: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+}
+
+.section img {
+    width: 128px; /* Ajusta el tamaño según tus necesidades */
+    height: 128px;
+    object-fit: contain;
+    margin-bottom: 4px;
+  }
+  
+/* Colores específicos para cada sección */
+#data-source { background-color: #cce5ff; }
+#predictive-analysis { background-color: #d4edda; }
+#automated-testing { background-color: #fff3cd; }
+#lifecycle-orchestration { background-color: #f8d7da; }
+#user-interaction { background-color: #e2e3e5; }
+#innovation-module { background-color: #d1c4e9; } 

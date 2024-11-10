@@ -1,0 +1,116 @@
+/* Estilos generales */
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f0f2f5;
+  margin: 0;
+  padding: 0;
+}
+
+/* Contenedor principal del chat */
+#chatContainer {
+  display: flex;
+  flex-direction: column;
+  width: 1000px;
+  max-width: 100%;
+  height: 90vh;
+  margin: 20px auto;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+/* Área donde se muestran los mensajes */
+#chat {
+  flex: 1;
+  padding: 10px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Área de entrada de texto */
+#inputArea {
+  display: flex;
+  border-top: 1px solid #ccc;
+}
+
+#userInput {
+  flex: 1;
+  padding: 15px;
+  font-size: 16px;
+  border: none;
+  outline: none;
+}
+
+#userInput::placeholder {
+  color: #999;
+}
+
+#sendBtn {
+  padding: 0 20px;
+  background-color: #0084ff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+#sendBtn:hover {
+  background-color: #006bbd;
+}
+
+/* Estilos para los mensajes */
+.message {
+  margin: 5px 0;
+  padding: 10px 15px;
+  border-radius: 20px;
+  max-width: 75%;
+  word-wrap: break-word;
+  line-height: 1.4;
+  white-space: normal;
+}
+
+/* Mensajes del usuario */
+.user {
+  align-self: flex-end;
+  background-color: #dcf8c6;
+  border-bottom-right-radius: 0;
+}
+
+/* Mensajes de la IA */
+.ai {
+  align-self: flex-start;
+  background-color: #ececec;
+  border-bottom-left-radius: 0;
+}
+
+/* Indicador de escritura */
+#typing {
+  font-style: italic;
+  color: #666;
+}
+
+/* Scrollbar personalizado */
+#chat::-webkit-scrollbar {
+  width: 8px;
+}
+
+#chat::-webkit-scrollbar-thumb {
+  background-color: #ccc;
+  border-radius: 4px;
+}
+
+#chat::-webkit-scrollbar-thumb:hover {
+  background-color: #aaa;
+}
+
+.chat-header {
+    background-color: #007bff;
+    color: #ffffff;
+    padding: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+}
