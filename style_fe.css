@@ -82,8 +82,8 @@ body {
 }
 
 .section img {
-    width: 128px; /* Ajusta el tamaño según tus necesidades */
-    height: 128px;
+    width: 96px; /* Ajusta el tamaño según tus necesidades */
+    height: 96px;
     object-fit: contain;
     margin-bottom: 4px;
   }
