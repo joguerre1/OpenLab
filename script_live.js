@@ -193,7 +193,9 @@ async function getAIResponse(text) {
       const result = await response.json();
   
       // Aquí se asume que el campo de respuesta que quieres es result.contents[0].parts[0].text
-      return result.contents[0].parts[0].text;
+      
+      return result.candidates[0].content.parts[0].text
+      //return JSON.stringify(result, null, 2);
     } catch (error) {
       console.error('Error:', error);
       return null;
